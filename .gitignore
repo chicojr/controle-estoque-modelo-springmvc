@@ -1,0 +1,11 @@
+/bin
+/build
+/.gradle
+/.settings
+.classpath
+.project
+.settings
+*.class
+*.orig
+*.war
+*.ear
