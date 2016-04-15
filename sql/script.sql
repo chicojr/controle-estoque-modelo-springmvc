@@ -26,9 +26,6 @@ CREATE TABLE usuario (
     senha varchar(50)
 );
 
-
--- -------------------------------------------------------------------------------------
-
 CREATE TABLE estado (
 
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY, 
@@ -63,13 +60,30 @@ CREATE TABLE empresa (
 	telefones varchar(100)
 );
 
+
+---------------------------------------------------------------------------------------
+
+
 ALTER TABLE cidade ADD CONSTRAINT fk_cidade_estado FOREIGN KEY (estado_id) REFERENCES estado(id);
 ALTER TABLE empresa ADD CONSTRAINT fk_empresa_cidade FOREIGN KEY (cidade_id) REFERENCES cidade(id);
 
 
+---------------------------------------------------------------------------------------
 
 
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Pernambuco','PE',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Rio de Janeiro','RJ',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Paraiba','PB',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Sao Paulo','SP',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Bahia','BH',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Para','PA',true);
+INSERT INTO estado (nome, sigla, habilitado) VALUES('Minas Gerais','MG',true);
 
-
-
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(1,'Jaboatao',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(2,'Angra dos Reis',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(3,'Joao Pessoa',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(4,'Ribeirao Preto',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(5,'Salvador',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(6,'Belem',true);
+INSERT INTO cidade (estado_id, nome, habilitado) VALUES(7,'Belo Horizonte',true);
 

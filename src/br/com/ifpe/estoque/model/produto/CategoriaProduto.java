@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.model;
+package br.com.ifpe.estoque.model.produto;
 
 import javax.validation.constraints.Size;
 

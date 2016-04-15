@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.controller;
+package br.com.ifpe.estoque.controller.produto;
 
 import java.util.Calendar;
 import java.util.List;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import br.com.ifpe.estoque.model.CategoriaProduto;
-import br.com.ifpe.estoque.model.CategoriaProdutoDao;
-import br.com.ifpe.estoque.model.Produto;
-import br.com.ifpe.estoque.model.ProdutoDao;
+import br.com.ifpe.estoque.model.produto.CategoriaProduto;
+import br.com.ifpe.estoque.model.produto.CategoriaProdutoDao;
+import br.com.ifpe.estoque.model.produto.Produto;
+import br.com.ifpe.estoque.model.produto.ProdutoDao;
 import br.com.ifpe.estoque.util.Util;
 
 @Controller

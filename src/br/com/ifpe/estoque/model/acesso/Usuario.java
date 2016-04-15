@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.model;
+package br.com.ifpe.estoque.model.acesso;
 
 public class Usuario {
 

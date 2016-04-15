@@ -8,7 +8,7 @@
 	<display-name>controle-estoque-modelo</display-name>
 
 	<welcome-file-list>
-		<welcome-file>view/index.jsp</welcome-file>
+		<welcome-file>view/principal/index.jsp</welcome-file>
 	</welcome-file-list>
 	
 	<servlet>

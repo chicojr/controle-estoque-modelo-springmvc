@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.model;
+package br.com.ifpe.estoque.model.produto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

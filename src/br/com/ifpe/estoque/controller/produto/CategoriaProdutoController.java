@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.controller;
+package br.com.ifpe.estoque.controller.produto;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.ifpe.estoque.model.CategoriaProduto;
-import br.com.ifpe.estoque.model.CategoriaProdutoDao;
+import br.com.ifpe.estoque.model.produto.CategoriaProduto;
+import br.com.ifpe.estoque.model.produto.CategoriaProdutoDao;
 
 @Controller
 public class CategoriaProdutoController {
@@ -18,7 +18,7 @@ public class CategoriaProdutoController {
     @RequestMapping("/exibirIncluirCategoriaProduto")
     public String exibirIncluirCategoriaProduto() {
 
-	return "categoriaProduto/incluirCategoriaProduto";
+	return "produto/incluirCategoriaProduto";
     }
 
     @RequestMapping("incluirCategoriaProduto")
@@ -42,7 +42,7 @@ public class CategoriaProdutoController {
 	List<CategoriaProduto> listaCategoriaProduto = dao.listar();
 	model.addAttribute("listaCategoriaProduto", listaCategoriaProduto);
 
-	return "categoriaProduto/pesquisarCategoriaProduto";
+	return "produto/pesquisarCategoriaProduto";
     }
 
     @RequestMapping("removerCategoriaProduto")
@@ -62,14 +62,14 @@ public class CategoriaProdutoController {
 	CategoriaProduto categoriaProdutoPreenchida = dao.buscarPorId(categoriaProduto.getId());
 	model.addAttribute("categoriaProduto", categoriaProdutoPreenchida);
 
-	return "categoriaProduto/alterarCategoriaProduto";
+	return "produto/alterarCategoriaProduto";
     }
 
     @RequestMapping("alterarCategoriaProduto")
     public String alterarCategoriaProduto(@Valid CategoriaProduto categoriaProduto, BindingResult result, Model model) {
 
 	if (result.hasErrors()) {
-	    return "categoriaProduto/alterarCategoriaProduto";
+	    return "produto/alterarCategoriaProduto";
 	}
 	
 	CategoriaProdutoDao dao = new CategoriaProdutoDao();

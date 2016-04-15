@@ -1,9 +1,9 @@
-package br.com.ifpe.estoque.controller;
+package br.com.ifpe.estoque.controller.produto;
 
 import org.springframework.core.convert.converter.Converter;
 
-import br.com.ifpe.estoque.model.CategoriaProduto;
-import br.com.ifpe.estoque.model.CategoriaProdutoDao;
+import br.com.ifpe.estoque.model.produto.CategoriaProduto;
+import br.com.ifpe.estoque.model.produto.CategoriaProdutoDao;
 
 /**
  * @author Roberto Alencar

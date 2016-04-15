@@ -1,4 +1,4 @@
-package br.com.ifpe.estoque.controller;
+package br.com.ifpe.estoque.controller.acesso;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.ifpe.estoque.model.Usuario;
-import br.com.ifpe.estoque.model.UsuarioDao;
+import br.com.ifpe.estoque.model.acesso.Usuario;
+import br.com.ifpe.estoque.model.acesso.UsuarioDao;
 
 @Controller
 public class UsuarioController {
@@ -82,14 +82,14 @@ public class UsuarioController {
 	}
 
 	model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
-	return "index";
+	return "principal/index";
     }
 
     @RequestMapping("logout")
     public String logout(HttpSession session) {
 
 	session.invalidate();
-	return "index";
+	return "principal/index";
     }
 
     @RequestMapping("/exibirHome")
